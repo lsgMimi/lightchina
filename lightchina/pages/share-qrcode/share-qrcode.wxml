@@ -1,0 +1,27 @@
+<!--pages/share-qrcode/share-qrcode.wxml-->
+<view class="share-qrcode-container">
+  <image class="share-qrcode-img" src="../../assets/share.jpg" mode="aspectFill"></image>
+  <view class="share-qrcode-details">
+    <view class="share-qrcode-info">
+      <view class="share-qrcode-user">
+        <image src="{{ avatarUrl }}" mode="aspectFill"></image>
+        <view class="share-qrcode-name">{{ userName }}</view>
+      </view>
+      <view class="share-qrcode-text">
+        “亲们，我录了一段新年祝福给你们，扫码收听帮我点亮祝福地图吧！”
+      </view>
+    </view>
+    <view class="share-qrcode-code">
+      <image src="{{ qrcode }}" mode="aspectFill"></image>
+    </view>
+  </view>
+  
+  <view class="share-qrcode-button" bindtap="shareHandler">分享到朋友圈</view>
+  <view hidden="{{!isShowBox}}">
+    <view class="share-qrcode-box">
+      <view class="qrcode-box-mask" bindtap="closeShareBox"></view>
+      <canvas canvas-id="qrcodeCanvas"></canvas>
+      <view class="save-image-button" bindtap="saveImgHandler">保存分享图</view>
+    </view>
+  </view>
+</view>

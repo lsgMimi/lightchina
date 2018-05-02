@@ -1,0 +1,20 @@
+{
+  "pages":[
+   
+    "pages/index/index",
+    "pages/light-records/light-records",
+    "pages/play-video/play-video",
+    "pages/light-china/light-china",
+    "pages/year-red-packet/year-red-packet",
+    "pages/new-year-bless/new-year-bless",
+    "pages/game-strategy/game-strategy",
+    "pages/wallet/wallet",
+    "pages/share-qrcode/share-qrcode"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#EE4C3B",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"#fff"
+  }
+}

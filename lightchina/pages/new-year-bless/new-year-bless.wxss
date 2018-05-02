@@ -1,0 +1,280 @@
+/* pages/new-year-bless/new-year-bless.wxss */
+page {
+  background: url('http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/bgs/qifu-bg.jpg');
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.bless-header {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 52rpx;
+  box-sizing: border-box;
+}
+
+.bless-up {
+  display: flex;
+  align-items: center;
+}
+
+.bless-up image {
+  width: 47rpx;
+  height: 46rpx;
+}
+
+.bless-up text {
+  margin-left: 12rpx;
+  font-size: 48rpx;
+  color: white;
+}
+
+.share-link {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 51rpx;
+}
+
+.bless-share {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.bless-share image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.bless-scroll-container {
+  width: 100%;
+  margin-top: 180rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.scroll-item {
+  height: 194rpx;
+  width: 286rpx;
+  position: relative;
+  display: inline-block;
+  margin-left: 10rpx;
+  border-radius: 26rpx;
+}
+
+.scroll-item-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.scroll-item-audio {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -45rpx;
+  margin-top: -45rpx;
+  z-index: 100;
+}
+
+.play-progress-circle {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -5rpx;
+  margin-left: -4rpx;
+  z-index: 0;
+  background: #fff;
+  border-radius: 50rpx;
+}
+
+.progress-circle-left,
+.progress-circle-right {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ffdfab;
+  transition: all .3s;
+}
+
+.progress-circle-right,
+.progress-clip-right {
+ clip: rect(-2rpx, auto, auto, 50rpx);
+}
+
+.progress-circle-left,
+.progress-clip-left {
+ clip: rect(-2rpx, 50rpx, auto, -2rpx);
+}
+
+.play-audio-progress {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 90;
+}
+
+.bless-audio-play {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.bless-audio-back {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.scroll-item-nums {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 22rpx;
+  position: absolute;
+  bottom: 15rpx;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20rpx;
+  color: #D7AB62;
+}
+
+.scroll-item-time {
+  font-size: 36rpx;
+}
+.bless-words {
+  width: 100%;
+  font-size: 37rpx;
+  line-height: 52rpx;
+  color: #FFD289;
+  text-align: center;
+  margin: 148rpx auto 122rpx;
+}
+.bless-words>view:last-child {
+  margin-top: 20rpx;
+}
+.bless-button-group {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bless-video-button,
+.bless-audio-button {
+  width: 156rpx;
+  height: 156rpx;
+  border-radius: 78rpx;
+  position: relative;
+}
+
+.upload-images {
+  width: 156rpx;
+  height: 156rpx;
+  border-radius: 78rpx;
+}
+
+.bless-video-button>image,
+.bless-audio-button>image,
+.upload-images>image {
+  width: 156rpx;
+  height: 156rpx;
+  position: relative;
+  z-index: 100;
+}
+
+.record-circle {
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  border-radius: 90rpx;
+  left: 0rpx;
+  top: 0rpx;
+  margin-left: -12rpx;
+  margin-top: -12rpx;
+  background: #ffd289;
+}
+
+.record-clip-left,
+.record-clip-right {
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.record-circle-left,
+.record-circle-right {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 90rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ee4c3b;
+  transition: all .3s;
+}
+
+.record-circle-right,
+.record-clip-right {
+ clip: rect(-2rpx, auto, auto, 90rpx);
+}
+
+.record-circle-left,
+.record-clip-left {
+ clip: rect(-2rpx, 90rpx, auto, -2rpx);
+}
+
+.bless-record-tips {
+  font-size: 24rpx;
+  color: #FFD289;
+  text-align: center;
+  margin: 46rpx auto 77rpx;
+}
+
+.share-button {
+  border: none;
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 1;
+  border-radius: 0;
+  text-align: center;
+  padding: 0;
+  background: none;
+  margin: 0
+}
+.share-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.bless-share-qrcode,
+.bless-share-friend {
+  width: 48rpx;
+  height: 48rpx;
+}

@@ -1,0 +1,30 @@
+/* pages/game-strategy/game-strategy.wxss */
+page {
+  background: url('http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/bgs/home-bg.jpg');
+  background-size: 100%;
+}
+.game-strategy {
+  width: 615rpx;
+  background: #fff;
+  font-size: 28rpx;
+  padding: 62rpx;
+  color: #6A7785;
+  line-height: 50rpx;
+  margin: 54rpx auto 0 auto;
+  box-sizing: border-box;
+  border-radius: 32rpx;
+}
+.game-strategy-title {
+  font-size: 40rpx;
+  color: #3F3F3F;
+  text-align: center;
+  margin-bottom: 44rpx;
+}
+
+.game-strategy-strong {
+  font-weight: bold;
+}
+.game-strategy>view:not(:first-child) {
+  margin-top: 20rpx;
+  text-indent: 2em;
+}

@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<scroll-view scroll-y style="height: 100vh">
+  <view class="index-container">
+    <view class="index-header">
+      <view class="index-user-info">
+        <image class="index-user-avatar" src="{{avatarUrl}}" mode="aspectFill"></image>
+        <view class="index-user-name">{{userName}}</view>
+      </view>
+      <view class="index-operations">
+        <navigator url="/pages/share-qrcode/share-qrcode" class="share-link">
+          <image class="index-home-share" src="../../assets/home-QR-code.png"></image>
+        </navigator>
+        <button open-type="share" type="mini" class="share-button" >
+          <image class="index-home-code" src="../../assets/home-share.png" mode="aspectFill"></image>
+        </button>
+      </view>
+      <view class="share-tip">分享到朋友圈</view>
+    </view>
+    <view class="bless-text">已有<text>{{ count }}</text>人收到您的祈福</view>
+    <view class="index-menus">
+      <navigator url="/pages/wallet/wallet" class="index-wallet">
+        <image  src="../../assets/wallet.png" mode="aspectFill"></image>
+      </navigator>
+      <view class="index-menu-split"></view>
+      <view class="index-lighter">
+        <image class="index-lighter-imgs" src="../../assets/home-dianliang.png" mode="aspectFill"></image>
+        <view class="index-lighter-nums">{{likes}}</view>
+      </view>
+    </view>
+    <view class="card-list">
+      <!-- <navigator url="/pages/new-year-bless/new-year-bless" class="card-item">
+        <image class="card-item-bg" src="../../assets/banner-2018.jpg" mode="aspectFill"></image>
+        <view class="card-item-info">
+          <view class="card-item-title">狗年祈福</view>
+          <image class="card-info-icon" src="../../assets/user.png" mode="aspectFill"></image>
+          <view class="card-info-num">{{blessingCount}}</view>
+        </view>
+        <image class="card-info-coin" src="../../assets/bitcoin.png" mode="aspectFill"></image>
+      </navigator> -->
+      <navigator url="/pages/light-china/light-china" class="card-item">
+        <image class="card-item-bg" src="../../assets/banner-map.jpg" mode="aspectFill"></image>
+        <view class="card-item-info">
+          <view class="card-item-title">点亮神州</view>
+          <image class="card-info-icon" src="../../assets/user.png" mode="aspectFill"></image>
+          <view class="card-info-num">{{lightCount}}</view>
+        </view>
+        <view class="light-china-footer">
+          <view class="light-china-details">
+            <view class="light-china-text">已点亮</view>
+            <view class="light-china-num">
+              <view>
+                <text class="index-light-text">{{provinces}}</text>
+                /34省
+              </view>
+              <view>
+                <text class="index-light-text">{{cities}}</text>
+                /389市
+              </view>
+            </view>
+          </view>
+          <image class="light-china-coin" src="../../assets/fu.png" mode="aspectFill"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class="subcard-list">
+      <navigator class="red-packets-link" url="/pages/year-red-packet/year-red-packet">
+        <image  src="../../assets/hongbao.png" mode="aspectFill"></image>
+      </navigator>
+      <navigator class="play-ways-link" url="/pages/game-strategy/game-strategy">
+        <image  src="../../assets/wanfa.jpg" mode="aspectFill"></image>
+      </navigator>
+    </view>
+  </view>
+
+</scroll-view>

@@ -1,0 +1,230 @@
+/**index.wxss**/
+page {
+  background: url('http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/bgs/home-bg.jpg');
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.index-container {
+  width: 100%;
+  padding: 46rpx 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.index-header {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.index-user-avatar {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+}
+.index-user-name {
+  font-size: 30rpx;
+  color: #6A7785;
+}
+.index-operations {
+  width: 170rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+.index-home-code,
+.index-home-share {
+  width: 48rpx;
+  height: 48rpx;
+}
+.share-tip {
+  position: absolute;
+  right: 20rpx;
+  font-size: 30rpx;
+  top: 60rpx;
+  color: #6A7785;
+}
+.share-button {
+  border: none;
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 1;
+  border-radius: 0;
+  text-align: center;
+  padding: 0;
+  background: none;
+  margin: 0
+}
+.share-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+.index-home-share {
+  vertical-align:top;
+}
+.index-menus {
+  width: 380rpx;
+  height: 46rpx;
+  margin: 33rpx auto 79rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.index-menu-split {
+  width: 4rpx;
+  height: 35rpx;
+  background: #EFA69F; 
+
+}
+.index-wallet {
+  width: 44rpx;
+  height: 46rpx;
+}
+
+.index-wallet>image {
+  width: 44rpx;
+  height: 46rpx;
+  border-radius: 4rpx;
+}
+
+.index-lighter {
+  display: flex;
+  align-items: center;
+}
+
+.index-lighter-imgs {
+  width: 47rpx;
+  height: 46rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+}
+.index-lighter-nums {
+  font-size: 38rpx;
+  color: #6A7785;
+  line-height: 46rpx;
+  margin-top: 4rpx;
+}
+.card-list {
+  width: 100%;
+  position: relative;
+}
+.card-item {
+  width: 100%;
+  height: 450rpx;
+  position: relative;
+  box-shadow: 0 20rpx 40rpx 0 rgba(0,0,0,0.26);
+  margin-bottom: 24rpx;
+  border-radius: 32rpx;
+}
+.card-item-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 32rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.card-info-coin {
+  width: 64rpx;
+  height: 64rpx;
+  position: absolute;
+  right: 37rpx;
+  bottom: 22rpx;
+  z-index: 100;
+}
+.light-china-footer {
+  width: 85%;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 40rpx;
+  bottom: 39rpx;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.light-china-num {
+  display: flex;
+  align-items: center;
+}
+.light-china-num>view:last-child {
+  margin-left: 17rpx;
+}
+.light-china-coin {
+  width: 64rpx;
+  height: 62rpx;
+}
+.index-light-text {
+  font-weight: 600;
+}
+.card-item-info {
+  position: absolute;
+  left: 39rpx;
+  top: 33rpx;
+  z-index: 100;
+}
+.card-item-title {
+  font-size: 64rpx;
+  color: #FFFFFF;
+  line-height: 90rpx;
+}
+.card-info-icon {
+  width: 41rpx;
+  height: 29rpx;
+}
+.card-info-num {
+  display: inline-block;
+  font-size: 38rpx;
+  color: #FFFFFF;
+  margin-left: 10rpx;
+}
+.subcard-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.red-packets-link {
+  width: 450rpx;
+  height: 220rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(0,0,0,0.26);
+  border-radius: 32rpx;
+}
+
+.red-packets-link>image {
+  width: 450rpx;
+  height: 220rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(0,0,0,0.26);
+  border-radius: 32rpx;
+}
+
+.play-ways-link {
+  width: 220rpx;
+  height: 220rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(0,0,0,0.26);
+  border-radius: 32rpx;
+}
+
+.play-ways-link>image {
+  width: 220rpx;
+  height: 220rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(0,0,0,0.26);
+  border-radius: 32rpx;
+}
+
+.bless-text {
+  text-align: center;
+  font-size:32rpx;
+  color:#6A7785;
+  margin-bottom: 10rpx;
+  margin-top: 15rpx;
+}
+.bless-text>text {
+  color: #EE4C3B;
+}

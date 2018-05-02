@@ -1,0 +1,33 @@
+/* pages/play-video/play-video.wxss */
+page {
+  background: url('http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/bgs/qifu-bg.jpg');
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.play-video-contaniner {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 300;
+}
+
+.play-video-mask {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, .5);
+}
+
+.play-curr-video {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

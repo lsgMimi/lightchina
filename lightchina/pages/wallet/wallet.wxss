@@ -1,0 +1,38 @@
+/* pages/wallet/wallet.wxss */
+
+.wallet-container {
+  width: 100%;
+  background: #ccc;
+  min-height: 100vh;
+  padding-top: 46rpx;
+}
+.wallet-list {
+  width: 615rpx;
+  background: #ffffff;
+  border-radius: 32rpx;
+  padding: 71rpx 62rpx;
+  box-sizing: border-box;
+  margin: 0rpx auto;
+}
+.wallet-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 40rpx;
+  color: #D1CEC2;
+  margin-bottom: 60rpx;
+}
+.wallet-item:last-child {
+  margin-bottom: 0;
+}
+.wallet-item-icon {
+  width: 122rpx;
+  height: 122rpx;
+  border-radius: 50%;
+}
+.wallet-item-num {
+  font-size: 64rpx;
+  color: #FFCC00;
+  text-shadow: 0 4rpx 0 #CF7A00;
+}

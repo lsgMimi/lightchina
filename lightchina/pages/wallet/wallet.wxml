@@ -1,0 +1,20 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="wallet-container">
+  <view class="wallet-list">
+    <view class="wallet-item">
+      <image class="wallet-item-icon" src="../../assets/ccoin.png"></image>
+      <view>×</view>
+      <view class="wallet-item-num">{{ dlc }}</view>
+    </view>
+    <!-- <view class="wallet-item">
+      <image class="wallet-item-icon" src="../../assets/bitcoin.png"></image>
+      <view>×</view>
+      <view class="wallet-item-num">0.003</view>
+    </view>
+    <view class="wallet-item">
+      <image class="wallet-item-icon" src="../../assets/bitcoin.png"></image>
+      <view>×</view>
+      <view class="wallet-item-num">0.003</view>
+    </view> -->
+  </view>
+</view>

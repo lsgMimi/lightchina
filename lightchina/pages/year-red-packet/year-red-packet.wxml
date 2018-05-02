@@ -1,0 +1,11 @@
+<!--pages/year-red-packet/year-red-packet.wxml-->
+<!-- <view class="red-packet-description">
+  
+</view> -->
+<view class="provinde-rewards-container">
+  <view>当新的城市点亮时，你将获得空投糖果的奖励；当一个省份的所有城市都被点亮，你会获得额外的奖励。若成功点亮中国，你将自动参与到新年大红包抽奖活动，有机会获得88万红包大奖！中奖后，我们会联系你送出大奖。快邀请你的好友一起玩耍吧！</view>
+
+  <view>点亮神州小程序是我们团队的创业项目。空投糖果是正常的市场营销活动。糖果并非“货币”，而是一种奖励token。我们团队希望这种奖励token能在未来给大家带来价值。最后，预祝大家新年快乐！</view>
+
+</view>
+

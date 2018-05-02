@@ -1,0 +1,77 @@
+/* pages/year-red-packet/year-red-packet.wxss */
+page {
+  background: url('http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/bgs/home-bg.jpg');
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.red-packet-description {
+  padding: 91rpx 110rpx 52rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  line-height: 52rpx;
+  color: #1D1D1D;
+}
+
+.provinde-rewards-container {
+  width: 615rpx;
+  font-size: 28rpx;
+  padding: 62rpx;
+  color: #6A7785;
+  text-indent: 2em;
+  background: #fff;
+  line-height: 50rpx;
+  margin: 54rpx auto 0 auto;
+  box-sizing: border-box;
+  border-radius: 32rpx;
+}
+
+.province-rewards-list {
+  width: 100%;
+  padding-left: 69rpx;
+  box-sizing: border-box; 
+}
+
+.province-rewards-item {
+  width: 100%;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 13rpx 0rpx 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36rpx;
+  color: #000000;
+}
+
+.province-rewards-datas,
+.area-rewards-datas {
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  color: #D3D3D3;
+  margin-top: 10rpx;
+}
+
+.province-rewards-datas>image,
+.area-rewards-datas>image {
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  margin-right: 21rpx;
+}
+
+.rewards-area-item {
+  width: 326rpx;
+  display: flex;
+  align-items: center;
+  padding: 36rpx 0rpx 34rpx;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.rewards-area-item:last-child {
+  border-bottom: none;
+}
+
+.rewards-area-item>view:first-child {
+  margin-right: 23rpx;
+}

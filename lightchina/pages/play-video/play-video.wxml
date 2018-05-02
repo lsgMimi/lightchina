@@ -1,0 +1,5 @@
+<!--pages/play-video/play-video.wxml-->
+<view class="play-video-contaniner">
+  <video id="myVideo" src="{{ videoSrc }}" controls class="play-curr-video" show-progress="true" bindended="lightHandler"></video>
+  <view class="play-video-mask"></view>
+</view>

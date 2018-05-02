@@ -1,0 +1,26 @@
+<!--pages/light-records/light-records.wxml-->
+<scroll-view  scroll-y style="height: 100vh">
+  <view class="light-records-container">
+    <view class="light-records-province">
+      <scroll-view  scroll-y style="height: 100vh">
+        <block wx:for="{{ provinceList }}" wx:key="p" wx:for-item="province" wx:for-index="province_index">
+          <view class="{{ isCurrent == province_index ? 'province-item province-curr-item' : 'province-item' }}" data-id="{{ province.id }}" data-index="{{ province_index }}" bindtap="provinceTabHandler">
+            <text>{{ province.name }}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="light-records-city">
+      <scroll-view  scroll-y style="height: 100vh" class="light-records-content" scroll-top="{{ scrollTop }}">
+        <block wx:for="{{ currentCity }}" wx:key="s" wx:for-item="city">
+          <view class="city-item {{ city.avatar ? 'city-item-lighted' : '' }}">
+              <view>{{ city.name }}</view>
+              <view class="light-user-avatar">
+                <image src="{{ city.avatar }}"></image>
+              </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</scroll-view>

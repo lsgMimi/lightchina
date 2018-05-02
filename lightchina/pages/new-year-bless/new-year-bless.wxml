@@ -1,0 +1,113 @@
+<!--pages/new-year-bless/new-year-bless.wxml-->
+<scroll-view scroll-y style="height: 100vh">
+  <view class="bless-container">
+    <view class="bless-header">
+      <view class="bless-up">
+        <image src="../../assets/dianliang.png"></image>
+        <text>{{ likesNum }}</text>
+      </view>
+      <view class="bless-share">
+        <navigator url="/pages/share-qrcode/share-qrcode" class="share-link">
+          <image class="bless-share-qrcode" src="../../assets/QR-code.png"></image>
+        </navigator>
+        <button open-type="share" type="mini" class="share-button" >
+         <image class="bless-share-friend" src="../../assets/share.png"></image>
+        </button>
+      </view>
+    </view>
+    <view class="bless-scroll-container">
+      <scroll-view scroll-x  style="width: 100%">
+        <block wx:for="{{ blessList }}" wx:key="p" wx:for-item="bless">
+          <view class="scroll-item">
+            <image class="scroll-item-bg" src="../../assets/zhufu.png"></image>
+            <audio id="audio{{index}}" bindtimeupdate="audioTimeUpdate" id="myAudio" src="{{ audioSrc }}" bindended="audioEndHandler"></audio>
+            <view class="scroll-item-audio">
+              <block wx:if="{{ bless.isPlay }}">
+                <image src="../../assets/pause.png" class="bless-audio-play" bindtap="playAudioHandler" data-index="{{ index }}" ></image>
+              </block>
+              <block wx:else>
+                <image src="../../assets/play.png" class="bless-audio-play" bindtap="playAudioHandler" data-index="{{ index }}" ></image>
+              </block>
+              <block wx:if="{{ isCurrent != index }}">
+                <view class="play-progress-circle">
+                  <view class="progress-circle-left" >
+                    <view class="progress-clip-left"></view>
+                  </view>
+                  <view class="progress-circle-right">
+                    <view class="progress-clip-right"></view>
+                  </view>
+                </view>
+              </block>
+              <block wx:else>
+                <block wx:if="{{ playPercent <= 50 }}">
+                  <view class="play-progress-circle">
+                    <view class="progress-circle-left" >
+                      <view class="progress-clip-left"></view>
+                    </view>
+                    <view class="progress-circle-right" style="transform: rotate({{ playPercent * 3.6 }}deg)">
+                      <view class="progress-clip-right"></view>
+                    </view>
+                  </view>
+                </block>
+                <block wx:else>
+                  <view class="play-progress-circle">
+                    <view class="progress-circle-left" style="transform: rotate({{ 3.6 * (playPercent - 50)}}deg)">
+                      <view class="progress-clip-left"></view>
+                    </view>
+                    <view class="progress-circle-right" style="transform: rotate(0deg); background: #ffffff">
+                      <view class="progress-clip-right"></view>
+                    </view>
+                  </view>
+                </block>
+              </block>
+              <image class="bless-audio-back" src="{{ bless.user.avatarUrl }}"></image>
+            </view>
+            <view class="scroll-item-nums">
+              <view class="scroll-item-time" wx:if="{{ bless.duration > 0.1 }}">{{ bless.duration }}s</view>
+              <view wx:else> </view>
+              <view>{{ bless.createdAt }}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="bless-words">
+      <view>按下按钮</view>
+      <view>发送小视频 ，语音和表情包 </view>
+      <view>玩转新年祝福吧！</view>
+    </view>
+    <view class="bless-button-group">
+      <view class="bless-audio-button" bindtap="uploadVideoHandler">
+        <image src="../../assets/camera-1.png"></image>
+      </view>
+      <view class="bless-video-button" bindtouchstart="startRecordHandler" bindtouchend='endRecordHandler'>
+        <image src="../../assets/mike-1.png"></image>
+        <view class="record-circle">
+          <block wx:if="{{recordPercent <= 50}}">
+            <view class="record-circle-left" >
+              <view class="record-clip-left"></view>
+            </view>
+            <view class="record-circle-right" style="transform: rotate({{recordPercent * 3.6}}deg)">
+              <view class="record-clip-right"></view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="record-circle-left" style="transform: rotate({{ 3.6 * (recordPercent - 50)}}deg)">
+              <view class="record-clip-left"></view>
+            </view>
+            <view class="record-circle-right" style="transform: rotate(0deg); background: #ffd289">
+              <view class="record-clip-right"></view>
+            </view>
+          </block>
+          <!-- <view class="record-mask">
+          </view> -->
+        </view>
+      </view>
+      <view class="upload-images" bindtap="uploadImgHandler">
+        <image src="../../assets/picture-1.png"></image>
+      </view>
+    </view>
+    <view class="bless-record-tips">录音-最多18秒</view>
+    
+  </view>
+</scroll-view>

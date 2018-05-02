@@ -1,0 +1,83 @@
+<!--pages/light-china/light-china.wxml-->
+  <view class="map-container">
+    <view class="light-china-map">
+      <image src="http://dlszoss.oss-cn-shanghai.aliyuncs.com/images/map-bg.gif"></image>
+      <image src="../../assets/zhongguo-touming.png"></image>
+      <image src="../../assets/nanhai.png" class="nanhai-image"></image>
+      <block wx:for="{{ lightProvince }}" wx:key="p">
+        <view class="province-icon">
+          <image src="../../assets/{{ item.name +'-'+ 1 }}.png" style="opacity: {{ 1 - item.opacity }}"></image>
+          <!-- <block wx:if="{{ item.value < 4 }}">
+             <view  style="background: url({{ 'http://dlszoss.minishengyi.cn/China/'+item.name +'-'+(item.value + 1)+'.png' }}) no-repeat; background-size: cover; background-position: center;"></view>
+          </block> -->
+        </view>
+      </block> 
+    </view>
+    <view class="light-china-banner" bindtap="collapseBanner">
+      <image src="../../assets/juanzhou.png" class="banner-axis"></image>
+      <view class="banner-content" style="width: {{bannerWidth}}rpx;">
+        <view class="banner-text-holder">{{ blessingText }}为你点亮{{ blessingAreas }}</view>
+      </view>
+      <image src="../../assets/juanzhou.png" class="banner-axis"></image>
+    </view>
+    <view class="bless-card">
+      <view class="{{ marginClass }}" bindtouchstart="touchStartHandler" bindtouchend="touchEndHandler" >
+        <image src="../../assets/zhufu.png" class="bless-bg"></image>
+        <image src="../../assets/fu.png" class='bless-fu'></image>
+        <audio src="" id="audios" bindended="playAudioLight" bindtimeupdate="audioTimeUpdate"></audio>
+        <image class="bless-audio-back" src="{{ audioInfo['user'].avatarUrl }}"></image>
+        <view class="bless-play-progress">
+          <image src="{{ audioSrc }}" class="bless-trigger" bindtap="playAudioHandler"></image>
+          <block wx:if="{{playPercent <= 50}}">
+            <view class="play-progress-circle">
+              <view class="progress-circle-left" >
+                <view class="progress-clip-left"></view>
+              </view>
+              <view class="progress-circle-right" style="transform: rotate({{ playPercent * 3.6 }}deg)">
+                <view class="progress-clip-right"></view>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="play-progress-circle">
+              <view class="progress-circle-left" style="transform: rotate({{ 3.6 * (playPercent - 50)}}deg)">
+                <view class="progress-clip-left"></view>
+              </view>
+              <view class="progress-circle-right" style="transform: rotate(0deg); background: #fff">
+                <view class="progress-clip-right"></view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="bless-title">{{ audioInfo.user.nickName }}</view>
+    <view class="bless-tip">点击播放 左右滑动下一个</view>
+    <view class="light-china-buttons">
+      <!--<view bindtap="randomLightHandler">用赞点亮</view>-->
+      <image src="../../assets/yongzandianliang.png" class="light-trigger" bindtap="randomLightHandler"></image>
+      <image src="{{ praiseImg }}" class="praise-trigger" bindtap="praiseHandler"></image>
+      <navigator url="/pages/light-records/light-records">
+        <image src="../../assets/dianliangjilu.png" class="light-record-link"></image>
+      </navigator>
+    </view>
+    <navigator url="/pages/new-year-bless/new-year-bless" class="send-blessing-buttons">
+      送祝福
+    </navigator>
+    <!-- -->
+    <view class="light-china-box" bindtap="hideBox" hidden="{{ !isShowBox }}"> 
+      <view class="box-bg">
+        <image src="../../assets/box.png"></image>
+      </view>
+      <!-- <view class="box-icon">
+        <image src="../../assets/ccoin.png"></image>
+      </view> -->
+      <view class="box-nums">
+        <text class="box-light-font">{{ dlcNum }}</text>枚
+      </view>
+      <view class="box-mask"></view>
+    </view>
+  </view>
+  <canvas canvas-id="resultCanvas" bindtap="hideLightAll" hidden="{{ !isLightAll }}">
+    <cover-image class="result-save" src="https://dlszoss.minishengyi.cn/images/screenshot-button.png" bindtap="saveSuccessImage"></cover-image>
+  </canvas>

@@ -1,0 +1,14 @@
+<!--pages/game-strategy/game-strategy.wxml-->
+<scroll-view scroll-y style="height: 100vh">
+  <view class="game-strategy">
+    <view class="game-strategy-title">点亮神州 祈福中国</view>
+    <view>点击“送祝福”进入狗年祈福界面送出你的祝福。祝福可以是表情包，小视频或是一段音频。</view>
+
+    <view><text class="game-strategy-strong">分享小程序给好友或朋友圈。让你的好友助力你点亮神州。</text>好友收到祝福后将帮你点亮他们所在的城市。当新的城市点亮时，你将获得空投糖果；当一个省份的所有城市都被点亮，你会获得额外的奖励。若成功点亮中国，你将自动参与到新年大红包抽奖活动，有机会获得88万红包大奖！中奖后，我们会联系你送出大奖。
+    </view>
+     
+    <view><text class="game-strategy-strong"> 集赞加速你的点亮进程。二个赞可以随机点亮一个城市。</text>快给你的好友点赞吧！</view>
+    <view>商务合作或意见反馈请联系：dianliangzhongguo@126.com</view>
+    
+  </view>
+</scroll-view>
